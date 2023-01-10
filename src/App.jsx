@@ -3,16 +3,11 @@ import './App.css';
 import User from './components/User';
 
 function App() {
-    let data="Ali";
-    function apple()
-    {
-        data="petter";
-        alert(data)
-    }
+  
     return ( 
         <div className="App">
-        <h1> {data} </h1>
-        <button onClick={apple}>Click me</button>
+        <h1> sher </h1>
+        <button>Update Date</button>
         <User />
        
        </div>
