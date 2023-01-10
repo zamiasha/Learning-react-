@@ -2,7 +2,11 @@ import React from 'react'
 
 function User () {
   return (
-    <h1>This is a heading</h1>
+
+    <div>
+    <div id='timer'>00:00</div>
+
+    </div>
   )
 }
 

@@ -1,13 +1,10 @@
-import React from "react";
+import React from 'react'
 
-
-function Student()
-{
-    return{
-        <div>
-            <h1>Student component</h1>
-        </div>
-    }
+function Student (props) {
+    console.warn(props)
+  return (
+    <h1>This is a heading</h1>
+  )
 }
 
-export default  Student;
+export default Student;
