@@ -6,11 +6,17 @@ import User  from './components/User';
 
 function App() {
 
+
     return ( 
         <div className="App">
 
+        <h1>Props in React😯) </h1>
+        
+          
     
     <Student name="Zaman" email="@gmail.com"/>
+    <Student name="haseeb" email="@gmail.com"/>    
+    <Student name="asad" email="@gmail.com"/>
     
         
        
