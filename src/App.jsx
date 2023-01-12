@@ -14,9 +14,9 @@ function App() {
         
           
     
-    <Student name="Zaman" email="@gmail.com"/>
-    <Student name="haseeb" email="@gmail.com"/>    
-    <Student name="asad" email="@gmail.com"/>
+    <Student name="Zaman" email="@gmail.com"  address="punjab" phone="123456789" />
+    <Student name="haseeb" email="@gmail.com" address="lahore" phone="987654321"/>    
+    <Student name="asad" email="@gmail.com" address="layyah" phone="456321789"/>
     
         
        
