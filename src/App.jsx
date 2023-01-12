@@ -9,11 +9,11 @@ function App() {
 
     const [data, setData]=useState(0)
     function updateData() {
-        setData(data + 1)
+        setData(data )
     }
     setInterval(()=> {
         console.log("");
-    })
+    },100000)
     console.warn("__________________");
     return ( 
         <div className="App">
@@ -22,8 +22,8 @@ function App() {
 
 
     
-    <Student name={"Zaman"}  />
-    <Student name={"azan"}  />
+    <Student name={"Zaman"} email="zaman@gmail.com"/>
+    
         
        
        </div>
