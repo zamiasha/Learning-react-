@@ -23,6 +23,7 @@ function App() {
 
     
     <Student name={"Zaman"}  />
+    <Student name={"azan"}  />
         
        
        </div>
