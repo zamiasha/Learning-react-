@@ -6,7 +6,7 @@ function Student ({name,email,address,phone}) {
             <h1>hi {name} </h1>
             <h2>Email {email} </h2>
             <h3>Living in {address} </h3>
-            <h4>Your phone number {phone} </h4>
+            <h4>Your phone number : {phone} </h4>
         </div>
 
 )
