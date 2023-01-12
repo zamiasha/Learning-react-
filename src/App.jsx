@@ -6,23 +6,11 @@ import User  from './components/User';
 
 function App() {
 
-
-    const [data, setData]=useState(0)
-    function updateData() {
-        setData(data )
-    }
-    setInterval(()=> {
-        console.log("");
-    },100000)
-    console.warn("__________________");
     return ( 
         <div className="App">
-        <h1>{data} </h1>
-        <button onClick={updateData}>Update Date</button>
-
 
     
-    <Student name={"Zaman"} email="zaman@gmail.com"/>
+    <Student name="Zaman" email="@gmail.com"/>
     
         
        

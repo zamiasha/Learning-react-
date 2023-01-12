@@ -1,10 +1,11 @@
 import React from 'react'
 
-function Student (props) {
-    console.log(props)
+function Student ({name,email}) {
   return (
-    <h1>hi {props.name} </h1>
-    <h2>Email : {props.email}</h2>
+    <>
+    <h1>hi {name} </h1>
+    <h1>Email {email} </h1>
+    </>
   )
 }
 
