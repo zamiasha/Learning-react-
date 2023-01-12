@@ -1,9 +1,9 @@
 import React from 'react'
 
 function Student (props) {
-    console.warn(props)
+    console.log(props.name)
   return (
-    <h1>This is a heading</h1>
+    <h1>Student Components</h1>
   )
 }
 

@@ -21,12 +21,13 @@ function App() {
         <button onClick={updateData}>Update Date</button>
 
 
+    
+    <Student name={"Zaman"}  />
         
        
        </div>
     );
 
-    <User />
 }
 
 
