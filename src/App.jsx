@@ -6,28 +6,19 @@ import User  from './components/User';
 
 function App() {
     
-    const [data, setData] = useState(null)
-    const [print, setPrint] = useState(false)
-    
-
-
-    function getData(val) {
-        console.warn(val.target.value)
-        setData(val.target.value)
-    }
+   const [status, setStatus]=React.useState(false)
 
     return ( 
         <div className="App">
-
-        <h1>Get input box value😯) </h1>
         {
-            print?
-            <h2>{data}</h2>
-            :null
+            status?
+            <h1>Hide and  show ) 😮</h1> : null
         }
-        <input type="text" onChange={getData} />
-        <button onClick={()=>setPrint(true)} >Print Data</button>
-        
+
+       
+        {/* <button onClick={()=>setStatus(false)}>hide</button>
+        <button onClick={()=>setStatus(true)}>show</button> */}
+        <button onClick={()=>setStatus(!status)}>Toogle</button>
 
        
        </div>
