@@ -1,26 +1,34 @@
 import React,{useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Student from './components/Student';
-import User  from './components/User';
+
 
 function App() {
     
-   const [status, setStatus]=React.useState(false)
+    const [name, setName]=useState("");
+    const [tnc, setTnc]=useState(false);
+    const [intrest, setIntrest]=useState("");
+   function getFormData(e) {
+    console.warn(name,tnc,intrest)
+    e.preventDefault()
+   }
 
     return ( 
         <div className="App">
-        {
-            status?
-            <h1>Hide and  show ) 😮</h1> : null
-        }
+        <h1>Handle from in React ) 😏</h1>
 
-       
-        {/* <button onClick={()=>setStatus(false)}>hide</button>
-        <button onClick={()=>setStatus(true)}>show</button> */}
-        <button onClick={()=>setStatus(!status)}>Toogle</button>
-
-       
+        <form onSubmit={getFormData}>
+            <input type="text" placeholder="Enter name"  onChange={(e)=>setName(e.target.value)}/> <br /> <br />
+            <select onChange={(e)=>setIntrest(e.target.value)}>
+            <option>Select Option </option>
+                <option>Captain America</option>
+                <option>Avengers</option>
+                <option>Fast and furious</option>
+            </select> <br /> <br />
+            <input type="checkbox"  onChange={(e)=>setTnc(e.target.checked)}/> <span>Accept terms and conditions</span>
+            <br /> <br />
+            <button type='submit'>Submit</button>
+        </form> 
        </div>
     );
 
