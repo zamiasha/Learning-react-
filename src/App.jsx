@@ -1,47 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
 // import React,{useState} from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 // import Login from './components/Login';
 // import Uses from './components/Uses'
 // import MemberUses from './components/MemberUses'
-import Constructtrlifecycle from './components/Constructtrlifecycle';
+// import Constructtrlifecycle from './components/Constructtrlifecycle';
+import Renderlifecycle from './components/Renderlifecycle';
+
+
 
 
 function App() { 
+         
     
+   const [hide, setHide] = useState("ali");
 
     return (
         <div className="App">         
-              <h1>Listing</h1>
+              <h1>Lifecycle Methode</h1>
 
-            <Constructtrlifecycle />
+              <Renderlifecycle  />
+
+
 
               
         </div>
     )
 
-// class App extends React.Component{
-
-      
-//     Constructor () {
-//        this.State={
-//         data:"zaman"
-
-//        }
-//     }
-
-//     render () {
-      
-
-//         return (
-//             <div>
-//                 <h1>hello i am here{this.State.data} </h1>
-//             </div>
-//         )
-//     }
-// }}
-    }
+}
 
 
 
