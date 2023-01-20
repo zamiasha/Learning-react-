@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+// import React, {useState} from 'react';
+import React from 'react';
 // import React,{useState} from 'react';
 // import logo from './logo.svg';
 import './App.css';
@@ -6,30 +7,49 @@ import './App.css';
 // import Uses from './components/Uses'
 // import MemberUses from './components/MemberUses'
 // import Constructtrlifecycle from './components/Constructtrlifecycle';
-import Renderlifecycle from './components/Renderlifecycle';
+
+// import DidMountlifecycle from './components/DidMountlifecycle'
 
 
 
 
-function App() { 
+// testing and  impletation  Comment 
+// function App() { 
          
-    
-   const [hide, setHide] = useState("ali");
-
-    return (
-        <div className="App">         
-              <h1>Lifecycle Methode</h1>
-
-              <Renderlifecycle  />
-
-
-
+//     return (
+//         <div className="App">         
+//               <h1>Lifecycle Methode DidMountlifecycle</h1>
               
-        </div>
-    )
+//         </div>
+//     )
 
+// }
+
+
+
+ class  App extends React.Component {
+
+    constructor () {
+        super();
+         console.warn("tetsing start here ");
+    } 
+    componentDidMount () {
+        console.warn("all over  them s")
+    }
+    render () {
+        console.warn("lets finsih ")
+        return (
+            <div className='App'>
+                <h1>
+                     life cycle => didmount methode 
+                </h1>
+            </div>
+        )
+    }
 }
 
+
+   
 
 
 export default App;
