@@ -31,7 +31,9 @@ import './App.css';
 
     constructor () {
         super();
-         console.warn("tetsing start here ");
+         this.state={
+            name:"ali"
+         }
     } 
     componentDidMount () {
         console.warn("all over  them s")
@@ -41,8 +43,9 @@ import './App.css';
         return (
             <div className='App'>
                 <h1>
-                     life cycle => didmount methode 
+                     life cycle => didmount methode {this.state.name} 
                 </h1>
+                <button onClick={() => {this.setState({name:"zamnan"})}} >Update  state content</button>
             </div>
         )
     }
