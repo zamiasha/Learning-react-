@@ -42,7 +42,7 @@ import './App.css';
         console.warn("lets finsih ")
         return (
             <div className='App'>
-                <h1>
+                <h1 style={{color: 'red'}}>
                      life cycle => didmount methode {this.state.name} 
                 </h1>
                 <button onClick={() => {this.setState({name:"zamnan"})}} >Update  state content</button>
