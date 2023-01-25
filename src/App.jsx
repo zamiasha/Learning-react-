@@ -1,5 +1,5 @@
 // import React from 'react';
-import React, {useState, use} from 'react';
+import React, { useEffect, useState } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 // import Login from './components/Login';
@@ -10,13 +10,20 @@ import './App.css';
 
 
 function App() { 
-         
-    const [data, setData] = useState("zaman");
+      const [count, setCount] = useState(0)
+
+      useEffect(() => {
+        const interval = setInterval(() => {
+          setCount(count + 1);
+        }, 1000);
+        return () => clearInterval(interval);
+      }, [count]);
+      
+   
     return (
         <div className="App">         
-              <h1>{data}</h1>
-        
-              <button onClick={() => setData("sher")}>update data </button>
+              <h1> use Effect  component   {count} </h1> 
+              <button onClick={() => setCount(count + 1)}>Counter  changer  </button>       
         </div>
     )
 
