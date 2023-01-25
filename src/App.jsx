@@ -10,20 +10,21 @@ import './App.css';
 
 
 function App() { 
-      const [count, setCount] = useState(0)
-
-      useEffect(() => {
-        const interval = setInterval(() => {
-          setCount(count + 1);
-        }, 1000);
-        return () => clearInterval(interval);
-      }, [count]);
       
-   
+      const [data, setData] = useState(10);
+      const [count, setCount] = useEffect(100);
+
+   //code merge may its possible 
+   useEffect(()=> {
+    console.log("use effect called ")
+   })
+
     return (
         <div className="App">         
-              <h1> use Effect  component   {count} </h1> 
-              <button onClick={() => setCount(count + 1)}>Counter  changer  </button>       
+              <h1> Count : {count}  </h1> 
+               
+
+              <button onclick={() => setCount(count + 1 )  }>update counnt</button>     
         </div>
     )
 
