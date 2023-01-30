@@ -1,5 +1,7 @@
-import React, { useEffect, useState, usestate} from 'react';
-// import React from 'react';
+// import React, { useEffect, useState, usestate} from 'react';
+import React from 'react';
+import "./custom.css"
+import style from './Custom.module.css'
 // import logo from './logo.svg';
 import './App.css';
 import Specificdata from './components/Specificdata';
@@ -9,27 +11,13 @@ import Specificdata from './components/Specificdata';
 
 function App() { 
     
-    const [data, setData] = useState(0);
-        const [counter, setCounter] = useState(100);
-     
-       useEffect(() => {
-        console.log("Called with data states");
-        }, [data] );
-         
-        useEffect(() => {
-            console.log("Called with counter states");
-            }, [counter] );
-             
-
+console.log("style???", style);
     return (
         <div className="App"> 
-      
-         
-         
-        <Specificdata counter={counter} data={data} />
-       
-           <button onClick={() => setCounter(counter + 1)}>update the counter state</button>
-           <button onClick={() => setData(data + 1)}>update the data state </button>
+     
+       <h1 className='primary'>Style 1  user here </h1>
+       <h1 style={{color: 'red',backgroundColor:  'yellow' }}>Style 2  user here </h1>
+       <h1 className={style.success}>Style 3  user here </h1>
 
 
         </div>
