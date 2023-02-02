@@ -6,6 +6,7 @@ import style from './Custom.module.css'
 import './App.css';
 import userEvent from '@testing-library/user-event';
 import { Table } from 'react-bootstrap';
+import { useIsRTL } from 'react-bootstrap/esm/ThemeProvider';
 // import Button from 'react-bootstrap/Button';
 // import De from './components/De'
 // import Login from './components/Login';
@@ -16,11 +17,25 @@ function App() {
       
     // const student = ['user1', 'user2', 'user3', 'zahib'];
      const student = [
-      {name : "user", email : "user@gmail.com", phone : "3333"},
-      {name : "user2", email : "user2@gmail.com", phone : "888"},
-      {name : "user3", email : "user3@gmail.com", phone : "2342"},
-      {name : "user4", email : "user4@gmail.com", phone : "1111"}
-     ]
+      {name : "user", email : "user@gmail.com", address : 
+      [{ hn:"10", city : "jaapur", country: "pak"},
+      { hn:"15", city : "jhaniya", country: "pak"},
+      { hn:"99", city : "mardan", country: "pak"},
+      { hn:"56", city : "purali", country: "pak"}
+    ]},
+      {name : "user2", email : "user2@gmail.com", address : 
+      [{ hn:"10", city : "jaapur", country: "pak"},
+      { hn:"15", city : "jhaniya", country: "pak"},
+      { hn:"99", city : "mardan", country: "pak"},
+      { hn:"56", city : "purali", country: "pak"}
+    ]},
+      {name : "user3", email : "user3@gmail.com", address : 
+      [{ hn:"10", city : "jaapur", country: "pak"},
+      { hn:"15", city : "jhaniya", country: "pak"},
+      { hn:"99", city : "mardan", country: "pak"},
+      { hn:"56", city : "purali", country: "pak"}
+    ]},
+      ]
       
     return (
         <div className="App"> 
@@ -31,9 +46,16 @@ function App() {
           <tr>
               <td>Name</td>
               <td>Email</td>
-              <td>Phone</td>
+              <td> {
+                student[0].address.map((data)=>
+                <tr>
+              <td>{data.hn}</td>
+              <td>{data.city}</td>
+              <td>{data.country}</td>
+              </tr>)
+              } </td>
             </tr>
-         {
+         {/* {
           student.map((data,i)=>
             <tr key={i}>
               <td>{data.name}</td>
@@ -41,8 +63,16 @@ function App() {
               <td>{data.phone}</td>
             </tr>
           )
-        }
+        } */}
         </tbody>
+        {
+          student.map((item)=>
+          <tr>
+              <td>{item.name} </td>
+              <td>{item.email}</td>
+              <td>Address</td>
+            </tr>)
+        }
         </Table>
      
     
